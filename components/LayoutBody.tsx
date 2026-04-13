@@ -1,0 +1,24 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Siderbar from '@/app/sidebar/page';
+
+const noSidebarPages = ['/', '/login'];
+
+export default function LayoutBody({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const hideSidebar = noSidebarPages.includes(pathname);
+
+  return (
+    <body>
+      {hideSidebar ? (
+        <>{children}</>
+      ) : (
+        <>
+          <Siderbar />
+          <main className="main-content">{children}</main>
+        </>
+      )}
+    </body>
+  );
+}

@@ -1,14 +1,13 @@
 'use client';
 import "../globals.css";
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import ImportModal from '@/components/ImportModal';
 import { useState } from 'react';
 
 import {
   Plus, ClipboardList, Target, ImageIcon, ShieldCheck,
   Folder, CircleCheck, Loader, Eye,
-  Upload, History, Map, Settings, ArrowRight,
+  Upload, History, Map, Settings
 } from 'lucide-react';
 
 const leastData = [
@@ -139,7 +138,7 @@ export default function Dashboard() {
           <div className="quick-actions">
             <span className="qa-title">快速操作</span>
 
-            <a className="qa-item primary" href="/upload">
+            <a className="qa-item primary" onClick={() => setShowImport(true)}>
               <Upload className="qa-icon" />
               <span>上傳圖片辨識</span>
             </a>

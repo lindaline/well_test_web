@@ -98,7 +98,6 @@ export default function ImportModal({ onClose }: ImportModalProps) {
             </span>
           </div>
         </div>
-
       </div>
     </div>
   );
