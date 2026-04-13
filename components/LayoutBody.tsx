@@ -5,13 +5,15 @@ import Siderbar from '@/app/sidebar/page';
 
 const noSidebarPages = ['/', '/login'];
 
+const login_state = true;
+
 export default function LayoutBody({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const hideSidebar = noSidebarPages.includes(pathname);
 
   return (
     <body>
-      {hideSidebar ? (
+      {!login_state ? (
         <>{children}</>
       ) : (
         <>
