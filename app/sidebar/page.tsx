@@ -9,11 +9,12 @@ import {
   History,
   Map,
   User,
+  LogOut,
 } from 'lucide-react';
 
 const navItems = [
   { icon: LayoutDashboard, label: '首頁',href: '/dashboard'},
-  { icon: Scan, label: '水井辨識',href: '/scan'},
+  { icon: Scan, label: '水井辨識',href: '/well'},
   { icon: History, label: '辨識紀錄',href: '/history' },
   { icon: Map, label: '地圖檢視',href: '/map'},
 ];
@@ -50,6 +51,7 @@ export default function Sidebar() {
         <User className="w-5 h-5 text-slate-600" />
         <span className="text-sm text-slate-600">王小明</span>
       </Link>
+      
     </nav>
   );
 }

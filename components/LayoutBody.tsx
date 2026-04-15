@@ -13,7 +13,7 @@ export default function LayoutBody({ children }: { children: React.ReactNode }) 
 
   return (
     <body>
-      {!login_state ? (
+      {hideSidebar ? (
         <>{children}</>
       ) : (
         <>

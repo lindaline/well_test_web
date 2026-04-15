@@ -1,7 +1,13 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import "../globals.css";
 
 export default function Login() {
+  const router = useRouter();
+
+  function handleLogin() {
+    router.push('/dashboard');
+  }
     return (
         <>
             <div className="left-branding">
@@ -21,7 +27,9 @@ export default function Login() {
                     <input type="password" className="field-input" placeholder="請輸入密碼"/>
                 </div>
 
-                <button className="login-btn">登入</button>
+                <button className="login-btn" onClick={handleLogin}>
+                    登入
+                </button>
                 </div>
             </div>
         </>

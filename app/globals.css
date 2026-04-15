@@ -1329,6 +1329,7 @@ hr.title-divider,
 }
 
 .password-card {
+  height: min-content;
   width: 560px;
   background: #ffffff;
   border-radius: 20px;
@@ -3432,5 +3433,30 @@ hr.title-divider,
 }
 
 .password-card .btn-confirm:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.2);
+}
+
+/* ============================================================
+ *  Logout 按鈕 (放在 header) - 紅色警告按鈕
+ * ============================================================ */
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 12px 12px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  cursor: pointer;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 14px;
+  color: #ef4444;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #fef2f2;
 }
