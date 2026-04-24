@@ -3478,13 +3478,10 @@ hr.title-divider,
   cursor: grab;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   transition: background 0.2s;
-}
-
-.theme-toggle-light {
   background: #ffffff;
 }
 
-.theme-toggle-dark {
+html.dark .theme-toggle {
   background: #1e293b;
 }
 

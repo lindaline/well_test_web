@@ -142,18 +142,18 @@ export default function Dashboard() {
               <Upload className="qa-icon" />
               <span>上傳圖片辨識</span>
             </a>
-            <a className="qa-item secondary" href="/history">
+            <Link className="qa-item secondary" href="/history">
               <History className="qa-icon" />
               <span>查看辨識紀錄</span>
-            </a>
-            <a className="qa-item secondary" href="/map">
+            </Link  >
+            <Link className="qa-item secondary" href="/map">
               <Map className="qa-icon" />
               <span>開啟地圖檢視</span>
-            </a>
-            <a className="qa-item secondary" href="/settings">
+            </Link  >
+            <Link className="qa-item secondary" href="/settings">
               <Settings className="qa-icon" />
               <span>帳號設定</span>
-            </a>
+            </Link>
           </div>
         </div>
         {showImport && <ImportModal onClose={() => setShowImport(false)} />}

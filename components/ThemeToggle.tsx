@@ -5,7 +5,7 @@ import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggle() {
   const [dark, setDark] = useState(false);
-  const [position, setPosition] = useState({ x: 20, y: 20 });
+  const [position, setPosition] = useState({ x: 15, y: 600});
   const [dragging, setDragging] = useState(false);
   const dragRef = useRef<{ startX: number; startY: number; startPosX: number; startPosY: number } | null>(null);
   const movedRef = useRef(false);
@@ -54,7 +54,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className={`theme-toggle ${dark ? 'theme-toggle-dark' : 'theme-toggle-light'} ${dragging ? 'theme-toggle-dragging' : ''}`}
+      className={`theme-toggle ${dragging ? 'theme-toggle-dragging' : ''}`}
       style={{ left: position.x, top: position.y }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
