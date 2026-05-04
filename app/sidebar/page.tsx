@@ -14,7 +14,7 @@ import {
 const navItems = [
   { icon: LayoutDashboard, label: '首頁',href: '/dashboard'},
   { icon: Scan, label: '水井辨識',href: '/well'},
-  { icon: History, label: '辨識紀錄',href: '/history' },
+  { icon: History, label: '辨識紀錄',href: '/records' },
   { icon: Map, label: '地圖檢視',href: '/map'},
 ];
 

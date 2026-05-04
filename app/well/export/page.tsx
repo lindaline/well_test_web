@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { Download } from 'lucide-react';
 
 const gridItems = [
@@ -12,7 +11,6 @@ const gridItems = [
 ];
 
 export default function Export() {
-    const router = useRouter();
     return (
         <>
             <div className="page-title">資料匯出</div>
