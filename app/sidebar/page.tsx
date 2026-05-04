@@ -1,5 +1,4 @@
 'use client';
-import "../globals.css";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -30,7 +29,7 @@ export default function Sidebar() {
 
       <div className="nav-group">
         {navItems.map((item) => {
-          const isActive = pathname === item.href; // 自動比對
+          const isActive = pathname === item.href || pathname.startsWith(item.href + '/'); // 自動比對
           const Icon = item.icon;
           return (
             <Link
