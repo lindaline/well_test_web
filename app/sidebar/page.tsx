@@ -8,7 +8,7 @@ import {
   History,
   Map,
   User,
-  LogOut,
+  UserRoundPen,
 } from 'lucide-react';
 
 const navItems = [
@@ -16,7 +16,9 @@ const navItems = [
   { icon: Scan, label: '水井辨識',href: '/well'},
   { icon: History, label: '辨識紀錄',href: '/records' },
   { icon: Map, label: '地圖檢視',href: '/map'},
+  { icon: UserRoundPen, label: '用戶管理',href: '/users', adminOnly: true },
 ];
+const account = true;
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -28,7 +30,9 @@ export default function Sidebar() {
       <hr className="sidebar-divider" />
 
       <div className="nav-group">
-        {navItems.map((item) => {
+        {navItems
+        .filter((item) => !item.adminOnly || account)
+        .map((item) => {
           const isActive = pathname === item.href || pathname.startsWith(item.href + '/'); // 自動比對
           const Icon = item.icon;
           return (
